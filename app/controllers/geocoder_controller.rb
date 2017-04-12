@@ -7,6 +7,7 @@ class GeocoderController < ApplicationController
 
   def create
     process_tempfile params['locations'].tempfile, params['locations'].original_filename
+    render text: "Success<br> #{Rails.root}/public/uploads/#{params['locations'].original_filename} <br> #{Rails.root}/public/uploads/geohexes-#{params['locations'].original_filename}"
   end
   
   private

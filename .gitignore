@@ -21,3 +21,6 @@ config/docker/id_rsa
 
 **/.DS_Store
 dump.rdb
+
+public/uploads/*
+db/development.sqlite3

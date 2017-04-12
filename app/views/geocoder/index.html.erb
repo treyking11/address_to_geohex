@@ -1,0 +1,11 @@
+<h1>Geocoder</h1>
+
+<%= form_tag( geocoder_path,  multipart: true ) do %>
+  <div>
+    <%= label_tag "Locations CSV" %>
+    <%= file_field_tag 'locations' %>
+  </div>
+  <div>
+    <%= submit_tag "Save" %>
+  </div>
+<% end %>

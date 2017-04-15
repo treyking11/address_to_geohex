@@ -1,11 +1,17 @@
-<h1>Geocoder</h1>
+<div id= "page">
+  <div id= "title">
+    <h1>Address To Geohex Converter</h1>
+  </div>
 
-<%= form_tag( geocoder_path,  multipart: true ) do %>
-  <div>
-    <%= label_tag "Locations CSV" %>
-    <%= file_field_tag 'locations' %>
+  <div class= "container-fluid col-md-6">
+    <div class= "form-group">
+      <h4>Select Input CSV File</h4>
+      <%= form_tag( geocoder_path,  multipart: true ) do %>
+      <%= file_field_tag 'locations', class: "form-control btn btn-primary btn-md" %>
+          <%= submit_tag 'Run Conversion', class: "btn btn-primary btn-lg" %>
+
+    <% end %>
+
+    </div>
   </div>
-  <div>
-    <%= submit_tag "Save" %>
-  </div>
-<% end %>
+</div>

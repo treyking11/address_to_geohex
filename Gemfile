@@ -42,7 +42,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'rspec-rails'
-  gem 'verve_license', git: 'git@github.com:VerveWireless/verve_license.git'
 end
 
 group :development do

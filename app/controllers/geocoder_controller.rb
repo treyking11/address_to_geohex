@@ -29,13 +29,13 @@ class GeocoderController < ApplicationController
         results_csv << row.to_hash
       end
     
-      CSV.open(File.join(Rails.root, "public", "uploads", filename) , "w") do |csv|
+      CSV.open(File.join(Rails.root, "public", "uploads", "#{filename}"), "w") do |csv|
         csv << results_csv.first.keys
         results_csv.each do |hash|
           csv << hash.values
         end
       end
-      
+
       File.open(File.join(Rails.root, "public", "uploads", "geohexes-#{filename}"), 'w') do |file| 
         file.write(geohexes.flatten.uniq.join("\n"))
       end

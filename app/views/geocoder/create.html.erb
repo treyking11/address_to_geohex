@@ -1,0 +1,32 @@
+<div id="show">
+  <div id= "title">
+    <h1>Upload Successful!</h1>
+  </div>
+
+  <div class= "container-fluid col-xs-12">
+    <div class= "form-group">
+      <h3>Download Your Results Below</h3>
+    </div>
+
+    <div class= "form-group">
+      <div>
+        <%= link_to 'Download Lat/Long', root_url + @ll_file_path, class: "btn btn-primary btn-lg"%>
+      </div>
+    </div>
+
+    <div class= "form-group">
+      <div>
+        <%= link_to 'Download Geohex', root_url + @gh_file_path, class: "btn btn-primary btn-lg"%>
+      </div>
+    </div>
+
+    <div class= "form-group">
+      <label class="form-check-label">
+        Complete The 'Insertion Order Form' For Campaign Processing
+      </label>
+      <div>
+        <a class="btn btn-primary btn-lg" href="/IO TEMPLATE_Agency Buy_110114.xlsx"> Download Insertion Order Form </a>
+      </div>
+    </div>
+  </div>
+</div>

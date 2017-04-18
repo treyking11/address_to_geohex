@@ -30,3 +30,7 @@ db/development.sqlite3
 *.iml
 
 .idea/workspace.xml
+
+.idea/geo_segment_builder.iml
+
+.idea/workspace.xml

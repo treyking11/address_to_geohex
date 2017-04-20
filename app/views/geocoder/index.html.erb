@@ -6,9 +6,9 @@
   <div class= "container-fluid col-md-6">
     <div class= "form-group">
       <h3>Address To Lat/Long & Geohex Converter</h3>
-      <h4>Select Input CSV</h4>
       <h5>NOTE: This conversion runs both processes ('address to lat/long', as well as 'address to geohex'). At completion you will have the option of downloading either/both.</h5>
-
+      <H5>If you see a strange red and white page after submission, chances are that your CSV format is incorrect. Please download the correctly formatted template below.</H5>
+      <h4>Select Input CSV</h4>
       <%= form_tag( geocoder_path,  multipart: true ) do %>
       <%= file_field_tag 'locations', class: "form-control btn btn-primary btn-md" %>
           <%= submit_tag 'Run Conversion', class: "btn btn-primary btn-lg" %>
@@ -18,7 +18,7 @@
     </div>
 
     <div class= "form-group">
-      <h5>If you are unsure of the necessary document format, please download and use the blank template found below.</h5>
+      <h5>If you are unsure of the necessary CSV format, please download and use this blank template.</h5>
       <div>
         <a class="btn btn-primary btn-lg" href="/blank_template.csv"> Download Blank Template </a>
       </div>
@@ -27,6 +27,7 @@
       <h3>Lat/Long To Address Converter</h3>
 
     <div class= "form-group">
+      <H5>If you see a strange red and white page after submission, chances are that your CSV format is incorrect. Please download the correctly formatted template below.</H5>
       <h4>Select Input CSV File</h4>
       <%= form_tag( reverse_geocoder_path,  multipart: true ) do %>
           <%= file_field_tag 'locations', class: "form-control btn btn-primary btn-md" %>
@@ -35,7 +36,7 @@
       <% end %>
 
       <div class= "form-group">
-        <h5>If you are unsure of the necessary document format, please download and use the blank template found below.</h5>
+        <h5>If you are unsure of the necessary CSV format, please download and use this blank template.</h5>
         <div>
           <a class="btn btn-primary btn-lg" href="/blank_template2.csv"> Download Blank Template </a>
         </div>
